@@ -1,0 +1,60 @@
+﻿@model OVS.Database.Vote
+
+@{
+    ViewData["Title"] = "Vote";
+}
+
+<h2>Cast Your Votes</h2>
+
+<div class="card">
+    <div class="card-header">
+        Vote for Your Candidates
+    </div>
+    <div class="card-body">
+        <form method="post" asp-action="SubmitVotes">
+            <div class="mb-3">
+                <label asp-for="NationalParty" class="form-label">Select a National Political Party</label>
+                <select asp-for="NationalParty" class="form-select" required>
+                    <option value="" disabled selected>Select a party...</option>
+                    <option value="African National Congress">African National Congress (ANC)</option>
+                    <option value="Democratic Alliance">Democratic Alliance (DA)</option>
+                    <option value="Economic Freedom Fighters">Economic Freedom Fighters (EFF)</option>
+                    <option value="Inkatha Freedom Party">Inkatha Freedom Party (IFP)</option>
+                    <option value="Freedom Front Plus">Freedom Front Plus (FF+)</option>
+                    <option value="United Democratic Movement">United Democratic Movement (UDM)</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ProvincialParty" class="form-label">Select a Provincial Political Party</label>
+                <select asp-for="ProvincialParty" class="form-select" required>
+                    <option value="" disabled selected>Select a party...</option>
+                    <option value="African National Congress">African National Congress (ANC)</option>
+                    <option value="Democratic Alliance">Democratic Alliance (DA)</option>
+                    <option value="Economic Freedom Fighters">Economic Freedom Fighters (EFF)</option>
+                    <option value="Inkatha Freedom Party">Inkatha Freedom Party (IFP)</option>
+                    <option value="Freedom Front Plus">Freedom Front Plus (FF+)</option>
+                    <option value="United Democratic Movement">United Democratic Movement (UDM)</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="LocalParty" class="form-label">Select a Local Political Party</label>
+                <select asp-for="LocalParty" class="form-select" required>
+                    <option value="" disabled selected>Select a party...</option>
+                    <option value="African National Congress">African National Congress (ANC)</option>
+                    <option value="Democratic Alliance">Democratic Alliance (DA)</option>
+                    <option value="Economic Freedom Fighters">Economic Freedom Fighters (EFF)</option>
+                    <option value="Inkatha Freedom Party">Inkatha Freedom Party (IFP)</option>
+                    <option value="Freedom Front Plus">Freedom Front Plus (FF+)</option>
+                    <option value="United Democratic Movement">United Democratic Movement (UDM)</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Votes</button>
+        </form>
+    </div>
+</div>

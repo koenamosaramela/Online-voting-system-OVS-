@@ -1,0 +1,21 @@
+﻿@model OVS.Database.Vote
+
+@{
+    ViewData["Title"] = "Vote";
+}
+
+<h1>Vote</h1>
+
+<form asp-action="Vote" method="post">
+    <label for="electionType">Election Type:</label>
+    <select id="electionType" name="electionType">
+        <option value="National">National</option>
+        <option value="Provincial">Provincial</option>
+        <option value="Local">Local</option>
+    </select>
+
+    <label for="candidate">Candidate:</label>
+    <input type="text" id="candidate" name="candidate" />
+
+    <button type="submit">Vote</button>
+</form>
